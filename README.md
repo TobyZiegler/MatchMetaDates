@@ -12,3 +12,6 @@ Research discovered the terminal command "mdls" reads PDF metadata quite thoroug
 Currently, the source files are selected via dialog using AppleScript's Alias reading ability, then the location is converted to POSIX format for the shell script to understand.
 
 Following this, the file is read, then the information transferred to the file's system data.
+
+
+Note: initially uploaded both script file and text of script. Updating/uploading the script file seems pointless, so moving to just updating the text files with a copy/paste approach.
