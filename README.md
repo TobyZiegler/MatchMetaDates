@@ -7,7 +7,7 @@ This script is an attempt to read the metadata of any given PDF and update that 
 
 The script utilizes standard AppleScript wherever possible, wich turns out to be most of the code, with shell scripts used to execute the fiddley bits of reading the metadata and writing new dates.
 
-Research discovered the terminal command "mdls" reads PDF metadata quite thoroughly. The two most relevant items are kMDItemFSCreation for the meta creation date and kMDItemLastUsed for the meta modification date. The "onReadDate" subroutine builds the information needed for the shell script, then executes the shell script with a single variable, loading the results for return.
+Research discovered the terminal command "mdls" reads PDF metadata quite thoroughly. Unfortunately, it only reads file system metadates. Switched to "exiftool" to read internal metadates instead. The "onReadDate" subroutine builds the information needed for the shell script, then executes the shell script with a single variable, loading the results for return.
 
 Currently, the source files are selected via dialog using AppleScript's Alias reading ability, then the location is converted to POSIX format for the shell script to understand.
 
